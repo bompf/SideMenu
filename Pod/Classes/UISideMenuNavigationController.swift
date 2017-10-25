@@ -14,14 +14,6 @@ public protocol UISideMenuNavigationControllerDelegate: class {
     func sideMenuDidDisappear(menu: UISideMenuNavigationController, animated: Bool)
 }
 
-// This makes adherance to the protocol optional:
-extension UIViewController {
-    func sideMenuWillAppear(menu: UISideMenuNavigationController, animated: Bool) {}
-    func sideMenuDidAppear(menu: UISideMenuNavigationController, animated: Bool) {}
-    func sideMenuWillDisappear(menu: UISideMenuNavigationController, animated: Bool) {}
-    func sideMenuDidDisappear(menu: UISideMenuNavigationController, animated: Bool) {}
-}
-
 open class UISideMenuNavigationController: UINavigationController {
     
     fileprivate weak var temporarySideMenuDelegate: UISideMenuNavigationControllerDelegate?
